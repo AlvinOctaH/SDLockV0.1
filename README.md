@@ -14,3 +14,6 @@
 11. [License](#license)
 12. [Contact](#contact)
 ---
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
