@@ -1,4 +1,4 @@
-# SDLockV0.1
+# SDLockV0.1 [Prototype]
 ---
 ## Table of Contents
 1. [Introduction](#introduction)
