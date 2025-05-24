@@ -48,11 +48,24 @@ This project presents a smart door lock system based on facial recognition. It u
 The system consists of hardware and software components designed to operate together through REST API communication. The lock mechanism is driven by an SG90 servo motor, controlled by a Raspberry Pi, and integrated with a webcam to capture facial images.
 - The physical design includes a 3D-printed prototype
 - All wiring and layout are integrated into a compact and functional housing
+
 Prototype Views:
 - Front, side, and bottom views of the device
-
 <p align="center">
-    <img width="1000" src="https://github.com/AlvinOctaH/FRdoorlock-MNV2.3/blob/main/assets/SmartDoorLock.png" alt="result_training_test">
+  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp1.jpg" alt="Front view of the device">
+  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp2.jpg" alt="Bottom view of the device">
+  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp3.jpg" alt="Side view of the device">
+</p>
+
+- Wiring schematic of the smart door lock
+<p align="center">
+  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp4.png" alt="Front view of the device">
+</p>
+
+- Exploded hardware component diagram
+<p align="center">
+  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp5.png" alt="Front view of the device">
+  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp6.png" alt="Front view of the device">
 </p>
 
 ## Model Architecture
@@ -68,7 +81,7 @@ Prototype Views:
 ## Results and Evaluation
 - Face Detection: F1-score = 1.0
 - Face Recognition: Best threshold at 0.7 yields F1-score = 0.964
-- Anti-Spoofing Accuracy: 94.72% with "nguyenkhoa/antispoofing-3" dataset
+- Anti-Spoofing Accuracy: 94.72% using "nguyenkhoa/antispoofing-3" dataset
 - Security: FAR = 0%, FRR = 6.6%
 - Performance: Average system response time ≈ 9.26 seconds
 
