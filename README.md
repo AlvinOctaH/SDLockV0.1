@@ -1,4 +1,4 @@
-# SDLockV0.1 [Prototype]
+# [Prototype] SDLockV0.1
 ---
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -20,34 +20,71 @@ This project presents a smart door lock system based on facial recognition. It u
 </p>
 
 ## Features
-- Face detection and recognition
-- Anti-spoofing with dual-input CNN
-- Real-time access control
-- Servo motor integration
-- Cloud-connected recognition via Google Colab and ngrok
+- Real-time face detection and recognition
+- Anti-spoofing to prevent fake face attacks
+- Threshold-based Euclidean distance for identity verification
+- Servo motor control for lock/unlock mechanism
+- Integrated with Raspberry Pi and webcam
+- Remote access via Flask API hosted on Google Colab
 
 ## Installation
-- Python 3.7+
-- Raspberry Pi OS + Thonny
-- Google Colab for model inference
-- Dependencies: facenet-pytorch, flask, opencv-python, torch, ngrok, etc.
-<p align="justify">
-A complete step-by-step setup will be provided for Raspberry Pi and Colab.
-</p>
+- Clone this repository
+- Mount your Google Drive in Colab
+- Run colab_face_recognition.ipynb to start the Flask server
+- Connect Raspberry Pi to the internet and run:
+  - raspberry_pi_register_face.py to register users
+  - raspberry_pi_face_recognition.py to perform recognition and unlock the door.
 
 ## Usage
-- Register face using raspberry_pi_register_face.py
-- Run face recognition with raspberry_pi_face_recognition.py
-- Server-side face verification runs in Colab via colab_face_recognition.py
-- If face is real and matched, servo unlocks the door for 5 seconds
+- Register face images via the Raspberry Pi script
+- When a user is in front of the camera, the system:
+  - Detects the face using MTCNN
+  - Verifies liveness using anti-spoofing model
+  - Extracts facial features with InceptionResNetV1
+  - Compares against stored embeddings using Euclidean distance
+  - Unlocks door via servo motor if identity is verified
 
 ## System Design
+The system consists of hardware and software components designed to operate together through REST API communication. The lock mechanism is driven by an SG90 servo motor, controlled by a Raspberry Pi, and integrated with a webcam to capture facial images.
+- The physical design includes a 3D-printed prototype
+- All wiring and layout are integrated into a compact and functional housing
+Prototype Views:
+- Front, side, and bottom views of the device
+
 <p align="center">
     <img width="1000" src="https://github.com/AlvinOctaH/FRdoorlock-MNV2.3/blob/main/assets/SmartDoorLock.png" alt="result_training_test">
 </p>
-<p align="justify">
-The system consists of three core components: Raspberry Pi (servo + webcam), a cloud-based server (Colab), and a client-server connection via REST API. The camera captures images and sends them to the server, which processes recognition and returns the access status.
-</p>
+
+## Model Architecture
+- Anti-Spoofing: DualInputCNN model with RGB and LBP image branches
+- Face Recognition: InceptionResNetV1 pretrained on VGGFace2
+- Uses Euclidean distance to compare embeddings with a defined threshold (e.g., 0.7)
+
+## Dataset
+- Anti-spoofing: nguyenkhoa/antispoofing-3
+- Custom webcam images for finetuning anti-spoofing
+- Face recognition images registered manually via Raspberry Pi
+
+## Results and Evaluation
+- Face Detection: F1-score = 1.0
+- Face Recognition: Best threshold at 0.7 yields F1-score = 0.964
+- Anti-Spoofing Accuracy: 94.72% with "nguyenkhoa/antispoofing-3" dataset
+- Security: FAR = 0%, FRR = 6.6%
+- Performance: Average system response time ≈ 9.26 seconds
+
+## Future Work
+- Integrate Vision Transformer (ViT) with DINO pretraining for better spoofing resistance
+- Add channel attention mechanism to enhance anti-spoofing
+- Apply quantization and pruning for efficient edge deployment
+
+## Contributing
+Contributions are welcome. Please open issues and pull requests to collaborate or improve the system.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+Author: Alvin Octa Hidayathullah
+Email: alvinhidayatullah94@gmail.com
+GitHub: https://github.com/AlvinOctaH
+LinkedIn: www.linkedin.com/in/alvin-octa-hidayathullah
