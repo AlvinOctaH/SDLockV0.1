@@ -29,11 +29,12 @@ This project presents a smart door lock system based on facial recognition. It u
 
 ## Installation
 - Clone this repository
+- Download the DualInputCNN model from this repo: AlvinOctaH/DualInputCNN
 - Mount your Google Drive in Colab
 - Run colab_face_recognition.ipynb to start the Flask server
 - Connect Raspberry Pi to the internet and run:
   - raspberry_pi_register_face.py to register users
-  - raspberry_pi_face_recognition.py to perform recognition and unlock the door.
+  - raspberry_pi_face_recognition.py to perform recognition and unlock the door
 
 ## Usage
 - Register face images via the Raspberry Pi script
@@ -59,13 +60,13 @@ Prototype Views:
 
 - Wiring schematic of the smart door lock
 <p align="center">
-  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp4.png" alt="Front view of the device">
+  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp4.png" alt="Wiring schematic of the device">
 </p>
 
 - Exploded hardware component diagram
 <p align="center">
-  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp5.png" alt="Front view of the device">
-  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp6.png" alt="Front view of the device">
+  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp5.png" alt="Exploded view of the device">
+  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp6.png" alt="Component of the device">
 </p>
 
 ## Model Architecture
@@ -79,7 +80,7 @@ Prototype Views:
 - Face recognition images registered manually via Raspberry Pi
 
 ## Results and Evaluation
-- Face Detection: F1-score = 1.0
+- Face Detection: yields F1-score = 1.0
 - Face Recognition: Best threshold at 0.7 yields F1-score = 0.964
 - Anti-Spoofing Accuracy: 94.72% using "nguyenkhoa/antispoofing-3" dataset
 - Security: FAR = 0%, FRR = 6.6%
