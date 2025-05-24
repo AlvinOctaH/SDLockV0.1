@@ -29,7 +29,7 @@ This project presents a smart door lock system based on facial recognition. It u
 
 ## Installation
 - Clone this repository
-- Download the DualInputCNN model from this repo: AlvinOctaH/DualInputCNN
+- Download the DualInputCNN model from this repo: [AlvinOctaH/DualInputCNN](https://huggingface.co/AlvinOctaH/DualInputCNN)
 - Mount your Google Drive in Colab
 - Run colab_face_recognition.ipynb to start the Flask server
 - Connect Raspberry Pi to the internet and run:
