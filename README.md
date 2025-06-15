@@ -53,20 +53,21 @@ The system consists of hardware and software components designed to operate toge
 Prototype Views:
 - Front, side, and bottom views of the device
 <p align="center">
-  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp1.jpg" alt="Front view of the device">
-  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp2.jpg" alt="Bottom view of the device">
-  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp3.jpg" alt="Side view of the device">
+  <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp1.jpg" alt="Front view of the device">
+  <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp2.jpg" alt="Bottom view of the device">
+  <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp3.jpg" alt="Side view of the device">
 </p>
 
 - Wiring schematic of the smart door lock
 <p align="center">
-  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp4.png" alt="Wiring schematic of the device">
+  <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp4.png" alt="Wiring schematic of the device">
 </p>
 
 - Exploded hardware component diagram
 <p align="center">
-  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp5.png" alt="Exploded view of the device">
-  <img width="480" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp6.png" alt="Component of the device">
+  <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp5.png" alt="Exploded view of the device">
+  <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp6.jpg" alt="Component of the device">
+  <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp7.jpg" alt="Component of the device">
 </p>
 
 ## Model Architecture
@@ -75,15 +76,15 @@ Prototype Views:
 - Uses Euclidean distance to compare embeddings with a defined threshold (e.g., 0.7)
 
 ## Dataset
-- Anti-spoofing: nguyenkhoa/antispoofing-3
-- Custom webcam images for finetuning anti-spoofing
+- Anti-spoofing: nguyenkhoa/antispoofing-3 (using only 10.000 data)
+- Custom webcam images for finetuning anti-spoofing (190 data)
 - Face recognition images registered manually via Raspberry Pi
 
 ## Results and Evaluation
 - Face Detection: yields F1-score = 1.0
 - Face Recognition: Best threshold at 0.7 yields F1-score = 0.964
-- Anti-Spoofing Accuracy: 94.72% using "nguyenkhoa/antispoofing-3" dataset
-- Security: FAR = 0%, FRR = 6.6%
+- Anti-Spoofing Accuracy: 77,8% using "nguyenkhoa/antispoofing-3" dataset
+- Security: FAR = 0%, FRR = 6.7%
 - Performance: Average system response time ≈ 9.26 seconds
 
 ## Future Work
