@@ -1,4 +1,4 @@
-# [Prototype] SDLockV0.1
+# [Prototype] SDLock v0.1
 ---
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -63,7 +63,7 @@ Prototype Views:
   <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp4.png" alt="Wiring schematic of the device">
 </p>
 
-- Exploded hardware component diagram
+- Exploded View, 3D Assembly, and Technical Drawing of the SDLock v0.1 System
 <p align="center">
   <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp5.png" alt="Exploded view of the device">
   <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp6.jpg" alt="Component of the device">
