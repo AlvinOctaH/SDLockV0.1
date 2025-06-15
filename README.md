@@ -66,8 +66,8 @@ Prototype Views:
 - Exploded View, 3D Assembly, and Technical Drawing of the SDLock v0.1 System
 <p align="center">
   <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp5.png" alt="Exploded view of the device">
-  <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp6.jpg" alt="Component of the device">
-  <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp7.jpg" alt="Component of the device">
+  <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp6.jpg" alt="3D Assembly">
+  <img width="480" height="360" src="https://raw.githubusercontent.com/AlvinOctaH/SDLockV0.1/main/assets/Imp7.jpg" alt="Technical Drawing">
 </p>
 
 ## Model Architecture
